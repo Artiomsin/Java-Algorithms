@@ -1,5 +1,5 @@
 # Java-Algorithms
-https://sonarcloud.io/project/overview?id=Artiomsin_Java-Algorithms
+## Sonarcloud: https://sonarcloud.io/project/overview?id=Artiomsin_Java-Algorithms
 Tasks:
 - Контейнеры, очереди, стеки:
   1.
