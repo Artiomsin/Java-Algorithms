@@ -1,20 +1,21 @@
 ### IntelliJ IDEA ###
-# IntelliJ IDEA
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
 ### Eclipse ###
-# Eclipse
 .apt_generated
 .classpath
 .factorypath
-@@ -15,15 +15,21 @@ bin/
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
 ### NetBeans ###
-# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -22,9 +23,7 @@ out/
 /.nb-gradle/
 
 ### VS Code ###
-# VS Code
 .vscode/
 
 ### Mac OS ###
-# Mac OS
 .DS_Store
