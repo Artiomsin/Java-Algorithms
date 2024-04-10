@@ -1,7 +1,11 @@
 # IntelliJ IDEA
+<<<<<<< Updated upstream
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+=======
+.idea/
+>>>>>>> Stashed changes
 
 # Eclipse
 .apt_generated
