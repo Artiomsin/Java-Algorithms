@@ -1,14 +1,24 @@
-package org.example;
+package task_40.scr.org.example;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+/**
+ * Класс MoveToFront реализует стратегию сдвига в начало ("move to front") при чтении символов из стандартного ввода
+ * и сохранении их в связном списке без повторов.
+ */
 public class MoveToFront {
+    /**
+     * Вложенный класс, представляющий узел списка.
+     */
     private static class Node {
         char value;
         Node next;
-
+        /**
+         * Конструктор класса Node.
+         *
+         * @param value Значение узла.
+         */
         public Node(char value) {
             this.value = value;
             this.next = null;
@@ -16,11 +26,18 @@ public class MoveToFront {
     }
 
     private Node head;
-
+    /**
+     * Конструктор класса MoveToFront.
+     * Инициализирует пустой список.
+     */
     public MoveToFront() {
         head = null;
     }
-
+    /**
+     * Метод processInput считывает символы из стандартного ввода и выполняет стратегию сдвига в начало.
+     *
+     * @throws IOException Исключение, которое может возникнуть при обработке ввода-вывода.
+     */
     public void processInput() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите символы (для выхода введите '1'):");
@@ -39,7 +56,13 @@ public class MoveToFront {
 
         reader.close();
     }
-
+    /**
+     * Приватный метод handleInput обрабатывает введенный символ.
+     * Если символ уже присутствует в списке, он удаляется из текущей позиции и вставляется в начало списка.
+     * Если символ новый, он добавляется в начало списка.
+     *
+     * @param input Введенный символ для обработки.
+     */
     private void handleInput(char input) {
         Node previous = null;
         Node current = head;
@@ -63,7 +86,9 @@ public class MoveToFront {
         newNode.next = head;
         head = newNode;
     }
-
+    /**
+     * Метод printList выводит содержимое списка на экран.
+     */
     public void printList() {
         Node current = head;
 

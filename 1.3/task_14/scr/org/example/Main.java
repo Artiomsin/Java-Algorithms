@@ -1,7 +1,13 @@
-package org.example;
+package task_14.scr.org.example;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+/**
+ * Главный класс приложения, демонстрирующий использование класса ResizingArrayQueueOfStrings.
+ * Разработайте класс ResizingArrayQueue0fStrings, который реализует
+ * абстракцию очереди с массивом фиксированного размера, а потом
+ * добавьте в полученную реализацию изменение размера массива, чтобы снять ограничение на размер.
+ */
 
 public class Main {
     public static void main(String[] args) {
