@@ -1,9 +1,13 @@
-### IntelliJ IDEA ###
+# IntelliJ IDEA
+<<<<<<< Updated upstream
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+=======
+.idea/
+>>>>>>> Stashed changes
 
-### Eclipse ###
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -15,15 +19,21 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
+# Mac OS
 .DS_Store
+
+# Maven
+target/
+
+# Правило для pom.xml
+pom.xml
