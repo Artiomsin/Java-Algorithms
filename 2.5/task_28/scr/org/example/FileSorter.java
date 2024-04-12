@@ -15,7 +15,7 @@ public class FileSorter {
      */
     public static void main(String[] args){
         // Путь к директории, которую нужно отсортировать
-        String directoryPath="C:\\Users\\andre\\Desktop\\Java-Algorithms\\2.5\\task_28\\test";
+        String directoryPath="C:\\Users\\andre\\Desktop\\Java-Algorithms\\2.5\\test";
         File directory=new File(directoryPath);
 
         // Проверка, является ли указанный путь директорией
