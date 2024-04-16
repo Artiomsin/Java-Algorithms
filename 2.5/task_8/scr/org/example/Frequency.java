@@ -13,16 +13,16 @@ public class Frequency {
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
         List<String> Lines=new ArrayList<>();
-System.out.println("Введите строки (для выхода введите 1)");
-while(true){
+        System.out.println("Введите строки (для выхода введите 1)");
+        while(true){
             String line = in.nextLine();
-if(line.equals("1")){
-    break;
-}
-Lines.add(line);
+            if(line.equals("1")){
+                break;
+            }
+            Lines.add(line);
 
         }
-in.close();
+        in.close();
 
         Comparator<String>characterCountcomparator=new Comparator<String>() {
             @Override
@@ -34,12 +34,12 @@ in.close();
             }
         };
 
-Collections.sort(Lines,characterCountcomparator);
-for (String str:Lines)
-{
+        CustomCollections.sort(Lines,characterCountcomparator);
+        for (String str:Lines)
+        {
 
-    System.out.println(str);
-}
+            System.out.println(str);
+        }
     }
 
     /**
@@ -61,4 +61,27 @@ for (String str:Lines)
 
     }
 
+    /**
+     * Класс CustomCollections содержит методы для работы с коллекциями.
+     */
+    public static class CustomCollections {
+        /**
+         * Сортирует список с использованием заданного компаратора.
+         *
+         * @param list       Список, который нужно отсортировать.
+         * @param comparator Компаратор для определения порядка сортировки.
+         * @param <T>        Тип элементов списка.
+         */
+        public static <T> void sort(List<T> list, Comparator<? super T> comparator) {
+            for (int i = 0; i < list.size() - 1; i++) {
+                for (int j = 0; j < list.size() - i - 1; j++) {
+                    if (comparator.compare(list.get(j), list.get(j + 1)) > 0) {
+                        T temp = list.get(j);
+                        list.set(j, list.get(j + 1));
+                        list.set(j + 1, temp);
+                    }
+                }
+            }
+        }
+    }
 }
